@@ -1,0 +1,212 @@
+$red: #d62d20;
+$anim-length:0.2s;
+
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.search {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+.searchTerm {
+  width: 100%;
+  border: 3px solid #00B4CC;
+  padding: 5px;
+  height: 41px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9DBFAF;
+}
+
+.searchTerm:focus{
+  color: #00B4CC;
+}
+
+.searchButton {
+  width: 40px;
+  height: 36px;
+  border: 1px solid #00B4CC;
+  background: #00B4CC;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap{
+  width: 30%;
+  margin-top: 1%;
+  margin-left: 1%;
+}
+
+
+.content-table{
+  margin-top:3%;
+  padding: 1%;
+}
+
+
+
+
+.vertical {
+  position: relative;
+  left: 26px;
+  top: 19px;
+  width: 2px;
+  height: 16px;
+  background-color: white;
+}
+
+.horizontal {
+  @extend .vertical;
+  position: relative;
+  top: 3px;
+  transform: rotate(90deg);
+}
+.circle {
+  float: left;
+  zoom:2;
+  margin:1em;
+  width: 54px;
+  height: 54px;
+  background-color: $red;
+  border-radius: 50%;
+  box-shadow: 0px 5px 10px #b2b2b2;
+  .vertical{
+    transition: 
+      transform $anim-length, 
+      width $anim-length, 
+      height $anim-length, 
+      top $anim-length, 
+      left $anim-length;
+  }
+  .horizontal{
+    transition: 
+      transform $anim-length, 
+      width $anim-length, 
+      height $anim-length, 
+      top $anim-length, 
+      left $anim-length;
+  }
+  
+ 
+}
+
+.task-buttons{
+ margin: 10px;
+ width: 100px;
+}
+
+.gropu-by{
+  position: absolute;
+  right: 10px;
+  top: 17px;
+}
+
+.add-new-button{
+  position: absolute;
+  right: 0px;
+  bottom: 8%;
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  width: 150px !important;
+  min-width: 100px !important;
+}
+
+
+
+.react-datepicker-wrapper {
+  width: 100%;
+  input{
+    width: 100%;
+  }
+}
+
+.due-date{
+  margin-bottom: 10px;
+}
+
+.detailed-view{
+  margin-bottom: 40px;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.detailed-content{
+  margin-left: 5%;
+
+}
+
+.form-submit-button{
+margin-left: 65%;
+}
+
+.action-container{
+  display: flex;
+  justify-content: space-around;
+  border-bottom: none !important;
+  border-left: none !important;
+  border-right: none !important;
+}
+
+.modal-content{
+  min-height: 500px !important;
+  overflow-wrap: break-word;
+}
+
+.detail-value{
+  margin-left: 12%;
+  font-weight: 500;
+}
+
+.error-input{
+  color: red;
+}
+
+.bulk-dropdown{
+  margin-left: 88%;
+  margin-bottom: 20px;
+}
